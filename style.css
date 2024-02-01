@@ -79,25 +79,54 @@ header nav {
     margin-top: 10px;
 }
 
-header nav a {
+header nav a,#plant-selector {
     background-color: darkgreen;
     color: mintcream;
     text-decoration: none;
     height: 30px;
     display: inline-block;
-    margin: 0 2% 0 2%;
     width: 10%;
     min-width: 90px;
     padding: 5px;
     box-sizing: border-box;
+    margin: 0 2%;
+    transition: 250ms;
+    user-select: none;
+    border-radius: 0.5vh 0.5vh 0 0;
+}
+
+.menuitem {
+    padding: 5px;
 }
 
 #activenav {
     background-color: rgb(60, 100, 50);
 }
 
+#plant-selector {
+    position: relative;
+    display: inline-block;
+}
 
+.plant-dropdown {
+    display: none;
+    position: absolute;
+    background-color: darkgreen;
+    z-index: 1;
+}
 
+.plant-dropdown a {
+    width: 100%;
+    margin: 0;
+}
+
+#plant-selector:hover .plant-dropdown {
+    display: block;
+}
+
+header nav a:hover,#activenav:hover {
+    background-color: rgb(70, 110, 60);
+}
 
 
 /*  */
@@ -109,12 +138,17 @@ header nav a {
 #aboutbox {
     display: block;
     text-align: center;
-    width: 100%;
-    margin: 0;
+    max-width: 75%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.5%;
+    border-radius: 1vh;
+    box-shadow: 0 0 5vh rgba(0,0,0,0.1);
 }
 
 #aboutbox p {
-    margin: 5px;
+    font-size: 1rem;
+    margin: 1%;
     color: white;
 }
 
@@ -139,6 +173,8 @@ header nav a {
     box-sizing: border-box;
     margin: auto;
     margin-top: 5vh;
+    border-radius: 1vh;
+    overflow: hidden;
 }
 
 #infobox h2 {
@@ -147,8 +183,8 @@ header nav a {
 }
 
 #infobox p {
-    margin: 0.5vw;
-    font-size: 1.15vw;
+    margin: 0.8vw;
+    font-size: max(1.25vw, 0.8vh);
 }
 
 #infobox a {
@@ -156,19 +192,20 @@ header nav a {
 }
 
 #infobox article {
-    width: 70%;
+    width: calc(45vw);
     display: inline-block;
     height: 100%;
 }
 
-#infobox-container section aside {
+#infobox aside {
     display: inline-block;
     position: absolute;
     height: 25vw;
     width: 25vw;
     min-height: 180px;
     min-width: 180px;
-    right: 10vw;
+    right: 15vw;
+    border-radius: 0 1vh 1vh 0;
     margin: -10px -10px 0 0;
     background-image: url('./img/Forside-hoejbed1.jpg');
     background-position: center;
@@ -182,7 +219,6 @@ header nav a {
 #feature-background-container {
     width: 100%;
     height: 100vh;
-    padding: 20vh;
     box-sizing: border-box;
     background-image: url('./img/Forside-hoejbed2.jpg');
     background-position: center;
@@ -195,12 +231,14 @@ header nav a {
     text-align: center;
     padding: 15px;
     background-color: oldlace;
-    width: 40%;
+    width: min(max(400px, 40%), 100%);
     margin: auto;
+    margin-top: 20vh;
+    border-radius: 1vh;
 }
 
 #newest-plants-container h3 {
-    margin: 5px;
+    margin: 2%;
 }
 
 #newest-plants-container a {
@@ -214,19 +252,21 @@ header nav a {
 }
 
 #newest-plants-container ul li div {
-    width: 90%;
+    width: 100%;
     height: 82%;
     margin: auto;
+    border-radius: 0 0 1vh 1vh;
 }
 
 #newest-plants-container ul li {
     display: inline-block;
-    margin: 3px 5px;
+    margin: 5% 1%;
     text-align: center;
     font-size: 16px;
     background-color: beige;
     width: 30%;
-    height: 36vh;
+    height: min(max(400px, 20vw), 36vh);
+    border-radius: 1vh;
 }
 
 
@@ -239,12 +279,12 @@ header nav a {
 
 .plantinfo-headers {
     width: 100%;
-    background-color: beige;
     width: 95%;
     margin: auto;
     margin-bottom: 20px;
     padding: 20px;
     box-sizing: border-box;
+    border-radius: 1vh;
 }
 
 .plantinfo-headers h2,.plantinfo-headers h3 {
@@ -258,11 +298,11 @@ header nav a {
 .plantinfo-general {
     width: 95%;
     margin: auto;
-    background-color: beige;
     box-sizing: border-box;
     padding: 20px;
     align-items: center;
     margin-bottom: 20px;
+    border-radius: 1vh;
 }
 
 #plantinfo-general-desc {
@@ -275,7 +315,6 @@ header nav a {
     box-sizing: border-box;
     padding: 10px;
     margin: auto;
-    background-color: antiquewhite;
 }
 
 #plantinfo-general-fri h4,#plantinfo-general-for h4 {
@@ -294,8 +333,8 @@ header nav a {
     margin: auto;
     margin-bottom: 10px;
     width: 95%;
-    background-color: beige;
     box-sizing: border-box;
+    border-radius: 1vh;
 }
 
 #plantinfo-details-factbox {
@@ -308,8 +347,7 @@ header nav a {
 
 #plantinfo-details-factbox article {
     display: inline-block;
-    background-color: antiquewhite;
-    width: 25%;
+    width: 24%;
     margin: 3px;
     vertical-align: top;
 }
@@ -318,6 +356,7 @@ header nav a {
     width: 15%;
     display: inline-block;
     vertical-align: bottom;
+    border-radius: 1vh 0 0 1vh;
 }
 
 .plantinfo-details h6 {
@@ -331,4 +370,81 @@ header nav a {
 
 .plantinfo-details p span {
     font-weight: bold;
+}
+
+
+
+/* Farver for plante info sider */
+
+/* Primær boks farve */
+
+.plantinfo-headers,.plantinfo-general,.plantinfo-details {
+    background-color: beige;
+}
+
+/* Sekundær boks farve */
+
+#plantinfo-details-factbox article,#plantinfo-general-fri,#plantinfo-general-for {
+    background-color: antiquewhite;
+}
+
+
+
+/*  */
+/* Kontakt side */
+/*  */
+
+.generic-infobox {
+    width: 90%;
+    background-color: beige;
+    margin: 1% auto;
+    padding: 1%;
+    border-radius: 1vh;
+}
+
+.generic-infobox p {
+    margin: 0.5%;
+}
+
+.generic-infobox h2 {
+    margin: 0.5%;
+}
+
+form div {
+    background-color: antiquewhite;
+    padding: 0.5%;
+    margin: auto;
+    display: inline-block;
+    border-radius: 0.5vh;
+}
+
+#contactinfo-box {
+    text-align: center;
+}
+
+#contactinfo-box>* {
+    margin: auto 0.2%;
+}
+
+#contact-message {
+    display: block;
+    margin: 1% auto;
+}
+
+#contact-message label,#contact-message input {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+}
+
+#contact-message input {
+    height: 20vh;
+}
+
+form button {
+    background-color: white;
+    min-width: max-content;
+    width: 10%;
+    display: block;
+    margin: auto;
 }

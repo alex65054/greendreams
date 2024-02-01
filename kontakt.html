@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Forside - Grønne Drømme</title>
+</head>
+<body>
+    <header>
+        <h1>Grønne drømme</h1>
+        <p>Velkommen til vores website for haveentusiaster.</p>
+        <nav>
+            <a class="menu-item" href="index.html">Forside</a>
+            <div id="plant-selector" class="menu-item">
+                <span>Planter</span>
+                <div class="plant-dropdown">
+                    <a class="dropdown-option" href="./BeanBlueLake.html">Bønne</a>
+                    <a class="dropdown-option" href="./PeaAlderman.html" >Ært</a>
+                    <a class="dropdown-option" href="./BasilikumOcimumBasilicum.html">Basilikum</a>
+                </div>
+            </div>
+            <a id="activenav" class="menu-item" href="kontakt.html">Kontakt</a>
+        </nav>
+    </header>
+    <main>
+        <section class="generic-infobox">
+            <h2>Kontakt Os</h2>
+            <p>Vi hos Grønne Drømme går overhovedet ikke op i kundeservice, og vi brænder for at give dig den absolut værste oplevelse. Med den nedenstående formular, kan du sende os en henvendelse. Vi svarer alle vores henvendelser på samme tid årligt d. 30. februar. Vi har ikke særdeles meget lyst til at snakke med dig, så du må megert gerne klikke væk og hurtigt.</p>
+            <p>Kontakt Grønne Drømme teamet herunder.</p>
+        </section>
+        <section class="generic-infobox">
+            <form action="kontaktlanding.html">
+                <section id="contactinfo-box">
+                    <div>
+                        <label for="fname">Fornavn</label>
+                        <input type="text" name="fname" required>
+                    </div>
+
+                    <div>
+                        <label for="lname">Efternavn</label>
+                        <input type="text" name="lname" required>
+                    </div>
+
+                    <div>
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" required>
+                    </div>
+                </section>
+                <section>
+                    <div id="contact-message">
+                        <label for="message">Besked</label> <br>
+                        <input type="text" name="message" required>
+                    </div>
+                </section>
+                <button type="submit">Indsend</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© Grønne Drømme 2021</p>
+    </footer>
+</body>
+</html>

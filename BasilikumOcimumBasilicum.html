@@ -11,14 +11,74 @@
         <h1>Grønne drømme</h1>
         <p>Velkommen til vores website for haveentusiaster.</p>
         <nav>
-            <a href="index.html">Forside</a>
-            <a href="./BeanBlueLake.html">Bønne</a>
-            <a href="./PeaAlderman.html">Ært</a>
-            <a id="activenav" href="./BasilikumOcimumBasilicum.html">Basilikum</a>
+            <a class="menu-item" href="index.html">Forside</a>
+            <div id="plant-selector" class="menu-item">
+                <span>Planter</span>
+                <div class="plant-dropdown">
+                    <a class="dropdown-option" href="./BeanBlueLake.html">Bønne</a>
+                    <a class="dropdown-option" href="./PeaAlderman.html" >Ært</a>
+                    <a class="dropdown-option" id="activenav" href="./BasilikumOcimumBasilicum.html">Basilikum</a>
+                </div>
+            </div>
+            <a class="menu-item" href="kontakt.html">Kontakt</a>
         </nav>
     </header>
     <main>
-
+        <section class="plantinfo-headers">
+            <h2>Basilikum</h2>
+            <h3>Ocimum Basilicum</h3>
+        </section>
+        <section class="plantinfo-general">
+            <article id="plantinfo-general-desc">
+                <h4>Beskrivelse</h4>
+                <p>Der er over 60 basilikumsorter, og storbladet, sød basilikum - også kendt som klassisk, italiensk basilikum, er den mest almindelig solgte basilikum med ovale grønne blade og hvide blomster. Den har en kraftig aromatisk, let pebret smag med et strejf af mynte og nellike. Du kan bruge bladene både friske og tørrede, og smagen er helt perfekt sammen med tomater eller i en lækker hjemmelavet pesto. Basilikum kan med fordel plantes i drivhuset, da den tiltrækker bier og afskrækker fluer.</p>
+            </article>
+        </section>
+        <section class="plantinfo-details">
+            <img src="./img/BasilikumOcimumBasilicum.jpg" alt="Basilikum">
+            <section id="plantinfo-details-factbox">
+                <article>
+                    <h6>Type</h6>
+                    <p>Basilikum</p>
+                </article>
+                <article>
+                    <h6>Højde</h6>
+                    <p>45 cm</p>
+                </article>
+                <article>
+                    <h6>Såafstand</h6>
+                    <p>20 cm</p>
+                </article>
+                <article>
+                    <h6>Rækkeafstand</h6>
+                    <p>30 cm</p>
+                </article>
+                <article>
+                    <h6>Sådybde</h6>
+                    <p>1 cm</p>
+                </article>
+                <article>
+                    <h6>Lysforhold</h6>
+                    <p>Sol</p>
+                </article>
+                <article>
+                    <h6>Forspiring</h6>
+                    <p>Marts-Juni</p>
+                </article>
+                <article>
+                    <h6>Såning på friland</h6>
+                    <p>Maj-Juli</p>
+                </article>
+                <article>
+                    <h6>Spiring efter</h6>
+                    <p>ca. 20 dage</p>
+                </article>
+                <article>
+                    <h6>Moden til høst efter</h6>
+                    <p>ca. 60 dage</p>
+                </article>
+            </section>
+        </section>
     </main>
     <footer>
         <p>© Grønne Drømme 2021</p>

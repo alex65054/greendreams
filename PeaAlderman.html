@@ -11,14 +11,80 @@
         <h1>Grønne drømme</h1>
         <p>Velkommen til vores website for haveentusiaster.</p>
         <nav>
-            <a href="index.html">Forside</a>
-            <a href="./BeanBlueLake.html">Bønne</a>
-            <a id="activenav" href="./PeaAlderman.html">Ært</a>
-            <a href="./BasilikumOcimumBasilicum.html">Basilikum</a>
+            <a class="menu-item" href="index.html">Forside</a>
+            <div id="plant-selector" class="menu-item">
+                <span>Planter</span>
+                <div class="plant-dropdown">
+                    <a class="dropdown-option" href="./BeanBlueLake.html">Bønne</a>
+                    <a class="dropdown-option" id="activenav" href="./PeaAlderman.html" >Ært</a>
+                    <a class="dropdown-option" href="./BasilikumOcimumBasilicum.html">Basilikum</a>
+                </div>
+            </div>
+            <a class="menu-item" href="kontakt.html">Kontakt</a>
         </nav>
     </header>
     <main>
-
+        <section class="plantinfo-headers">
+            <h2>Ært</h2>
+            <h3>Pisum Sativum 'Alderman'</h3>
+        </section>
+        <section class="plantinfo-general">
+            <article id="plantinfo-general-desc">
+                <h4>Beskrivelse</h4>
+                <p>Herlig, god marvært der giver 7-10 ærter/bælg. En høj sort som kræver støtte, giver rigeligt udbytte på et lille areal. Giver udbytte i en lang periode. Velegnet til frysning. Noget sødere i smagen end normal marvært, men kan ikke sås lige så tidligt om foråret. Trives i porøs jord, men er ganske nøjsom. Vandes ved tørke. Dyrk ærter forskellige steder i køkkenhaven hvert år. De gøder jorden.</p>
+            </article>
+            <div>
+                <article id="plantinfo-general-fri">
+                    <h4>Frilandssåning</h4>
+                    <p>Når jorden er mindst 10°C varm, ellers rådner frøene. Vand sårillen før såning. Hold såningen fugtig, til frøene er spiret.</p>
+                </article>
+            </div>
+        </section>
+        <section class="plantinfo-details">
+            <img src="./img/PeaAlderman.jpg" alt="Ært">
+            <section id="plantinfo-details-factbox">
+                <article>
+                    <h6>Type</h6>
+                    <p>Mavært</p>
+                </article>
+                <article>
+                    <h6>Højde</h6>
+                    <p>180 cm</p>
+                </article>
+                <article>
+                    <h6>Såafstand</h6>
+                    <p>6 cm</p>
+                </article>
+                <article>
+                    <h6>Rækkeafstand</h6>
+                    <p>80 cm</p>
+                </article>
+                <article>
+                    <h6>Sådybde</h6>
+                    <p>3 cm</p>
+                </article>
+                <article>
+                    <h6>Lysforhold</h6>
+                    <p>Fuld sol</p>
+                </article>
+                <article>
+                    <h6>Forspiring</h6>
+                    <p>Marts-April</p>
+                </article>
+                <article>
+                    <h6>Såning på friland</h6>
+                    <p>Maj-Juni</p>
+                </article>
+                <article>
+                    <h6>Spiring efter</h6>
+                    <p>ca. 7 dage</p>
+                </article>
+                <article>
+                    <h6>Moden til høst efter</h6>
+                    <p>ca. 91 dage</p>
+                </article>
+            </section>
+        </section>
     </main>
     <footer>
         <p>© Grønne Drømme 2021</p>
