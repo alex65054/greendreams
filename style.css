@@ -113,11 +113,13 @@ header nav a,#plant-selector {
     position: absolute;
     background-color: darkgreen;
     z-index: 1;
+    left: 0;
 }
 
 .plant-dropdown a {
     width: 100%;
     margin: 0;
+    border-radius: 0;
 }
 
 #plant-selector:hover .plant-dropdown {
